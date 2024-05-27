@@ -11,6 +11,7 @@
     padding: 20px 0;
     background-color: #fff;
     border-bottom: 2px solid black;
+    border: 1px solid red;
 }
 
 header {
@@ -30,7 +31,6 @@ header a {
     padding: 10px 0px;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    text-align: center;
 }
 
 #principal-menu {
