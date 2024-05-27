@@ -8,9 +8,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 8px 16px;
+    padding: 0;
     background-color: #fff;
     border: 1px solid red;
+}
+
+header {
+    padding: 20px 100px;
+    border: 3px solid green;
 }
 
 #second-menu {
@@ -19,8 +24,19 @@
 }
 
 #second-menu>a {
-    padding: 10px 26px;
+    padding: 10px 0px;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-align: center;
+}
+
+#principal-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+
+#items-menu {
+    margin-left: 10px
 }
