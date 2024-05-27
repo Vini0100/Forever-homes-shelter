@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navegation-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid red;
+}
+
+#second-menu {
+    display: flex;
+    align-items: center;
+}
+
+#second-menu>a {
+    padding: 10px 26px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
