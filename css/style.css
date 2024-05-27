@@ -8,14 +8,17 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0;
+    padding: 20px 0;
     background-color: #fff;
-    border: 1px solid red;
+    border-bottom: 2px solid black;
 }
 
 header {
-    padding: 20px 100px;
-    border: 3px solid green;
+    padding: 0 100px;
+}
+
+header a {
+    text-decoration: none;
 }
 
 #second-menu {
@@ -34,7 +37,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
 }
 
 #items-menu {
