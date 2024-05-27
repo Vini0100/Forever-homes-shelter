@@ -16,6 +16,7 @@
 
 header {
     padding: 0 100px;
+    font-size: 20px;
 }
 
 header a {
@@ -29,8 +30,6 @@ header a {
 
 #second-menu>a {
     padding: 10px 0px;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
 }
 
 #principal-menu {
