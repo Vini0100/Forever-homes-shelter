@@ -9,24 +9,32 @@
 }
 
 header, main {
-    padding: 0 12vw;
-    font-size: 1.4em;
+    padding: 0 116px;
+    max-width: 1512px;
+    font-size: 20px;
     font-family: "Inter", sans-serif;
     font-weight: 700;
+    margin: 0 auto;
+    width: 100%;
 }
 
-header a {
+header {
+    max-height: 120px;
+    height: 100%;
+}
+
+a {
     text-decoration: none;
 }
 
 .center-container {
-    padding: 1.6em 0;
-    min-width: 320px;
+    padding: 28px 0;
+    max-width: 1208px;
+    width: 100%;
 }
 
 main div.center-container {
     display: flex;
-    border: 1px solid red;
     height: 80vh;
 }
 
@@ -37,41 +45,48 @@ header nav.center-container {
 }
 
 #second-menu {
+    max-width: 393px;
+    width: 100%;
     display: flex;
     align-items: center;
-}
-
-#second-menu>.donate-container {
-    margin-left: 1.5em;
 }
 
 #principal-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 730px;
+    width: 100%;
 }
 
 #items-menu {
+    max-width: 654px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #items-menu a{
-    margin: 5px 15px 5px 15px;
     color: #000;
 }
 
 #phone-container {
     display: flex;
     justify-content: space-between;
-    width: 8.5em;
+    max-width: 180px;
+    width: 100%;
+}
+
+#phone-container {
+    margin-right: 38px;
 }
 
 #phone-container>img {
-    height: 0.8em;
-    width: 0.8em;
+    height: 18px;
+    width: 18px;
     align-self: center;
+    margin-right: 12px;
 }
 
 .donate-container>a {
@@ -79,22 +94,36 @@ header nav.center-container {
     align-items: center;
     color: #fff;
     background-color: #FF3D9A;
-    border-radius: 60px;
-    padding: 0.8em 1.4em;
+    border-radius: 32px;
+    padding: 16px 32px;
+    height: 64px;
+    width: 181px;
+    max-width: 100%;
 }
 
 .donate-container a img {
-    height: 1em;
-    width: 1.1em;
+    height: 23.14px;
+    width: 25.81px;
     margin-right: 0.50em;
 }
 
 #container-logotype-header {
+    min-width: 60px;
+    min-height: 60px;
     display: flex;
     align-items: center;
 }
 
-@media (max-width: 1145px) {
+#container-logotype-header>img{
+    height: 48px;
+    width: 47.73px;
+}
+
+#main-content {
+    display: flex;
+}
+
+/* @media (max-width: 1145px) {
     header, main {
         padding: 0 5vw;
     }
@@ -141,4 +170,4 @@ header nav.center-container {
         height: 50px;
         width: 50px;
     }
-}
+} */
