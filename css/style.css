@@ -27,7 +27,7 @@ header a {
     align-items: center;
 }
 
-#second-menu>a {
+#second-menu>.donate-container {
     padding: 16px 32px;
     margin-left: 1em;
 }
@@ -42,8 +42,26 @@ header a {
     margin-left: 0.55em;
 }
 
-.donate-item {
-    color: #fff;
+#phone-container {
+    display: flex;
+}
+
+#phone-container>img {
+    align-self: center;
+    margin-right: 15px;
+}
+
+.donate-container {
+    display: flex;
     background-color: #FF3D9A;
     border-radius: 32px;
+}
+
+.donate-container>a {
+    color: #fff;
+}
+
+.donate-container>img {
+    align-self: center;
+    margin-right: 10px;
 }
