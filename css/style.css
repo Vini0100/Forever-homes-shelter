@@ -10,16 +10,15 @@
 
 #navegation-bar {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     padding: 1.6em 0;
-    background-color: #fff;
-    border-bottom: 5px solid black;
+    border-bottom: 2px solid black;
+    min-width: 320px;
 }
 
 header {
-    padding: 0 25em;
-    font-size: 2.1em;
+    padding: 0 12vw;
+    font-size: 1.4em;
     font-family: "Inter", sans-serif;
     font-weight: 700;
 }
@@ -43,20 +42,27 @@ header a {
     align-items: center;
 }
 
+#items-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #items-menu a{
-    margin-left: 0.70em;
+    margin: 5px 15px 5px 15px;
     color: #000;
 }
 
 #phone-container {
     display: flex;
+    justify-content: space-between;
+    width: 8.5em;
 }
 
 #phone-container>img {
-    width: 28px;
-    height: 28px;
+    height: 0.8em;
+    width: 0.8em;
     align-self: center;
-    margin-right: 15px;
 }
 
 .donate-container>a {
@@ -65,11 +71,65 @@ header a {
     color: #fff;
     background-color: #FF3D9A;
     border-radius: 60px;
-    padding: 28px 52px;
+    padding: 0.8em 1.4em;
 }
 
 .donate-container a img {
-    height: 35px;
-    width: 40px;
-    margin-right: 0.70em;
+    height: 1em;
+    width: 1.1em;
+    margin-right: 0.50em;
+}
+
+#container-logotype-header {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1145px) {
+    header {
+        padding: 0 5vw;
+    }
+}
+
+@media (min-width: 580px) and (max-width: 970px) {
+    header {
+        font-size: 0.8em;
+        padding: 0 5vw;
+    }
+    #items-menu a{
+        margin: 5px 5px 5px 5px;
+    }
+}
+
+@media (max-width: 580px) {
+    header {
+        font-size: 1.0em;
+    }
+
+    #navegation-bar {
+        flex-direction: column;
+    }
+
+    #principal-menu {
+        flex-direction: column;
+    }
+
+    #second-menu {
+        align-self: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #items-menu a{
+        margin: 5px 15px 5px 15px;
+    }
+
+    #items-menu{
+        width: 100%;
+    }
+
+    #container-logotype-header>img{
+        height: 50px;
+        width: 50px;
+    }
 }
