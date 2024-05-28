@@ -10,16 +10,15 @@
 
 #navegation-bar {
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
-    padding: 20px 0;
-    background-color: #fff;
-    border-bottom: 3px solid black;
+    padding: 1.6em 0;
+    border-bottom: 2px solid black;
+    min-width: 320px;
 }
 
 header {
-    padding: 0 10em;
-    font-size: 1.5em;
+    padding: 0 12vw;
+    font-size: 1.4em;
     font-family: "Inter", sans-serif;
     font-weight: 700;
 }
@@ -34,8 +33,7 @@ header a {
 }
 
 #second-menu>.donate-container {
-    padding: 16px 32px;
-    margin-left: 1em;
+    margin-left: 1.5em;
 }
 
 #principal-menu {
@@ -44,31 +42,94 @@ header a {
     align-items: center;
 }
 
+#items-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #items-menu a{
-    margin-left: 0.55em;
+    margin: 5px 15px 5px 15px;
     color: #000;
 }
 
 #phone-container {
     display: flex;
+    justify-content: space-between;
+    width: 8.5em;
 }
 
 #phone-container>img {
+    height: 0.8em;
+    width: 0.8em;
     align-self: center;
-    margin-right: 15px;
-}
-
-.donate-container {
-    display: flex;
-    background-color: #FF3D9A;
-    border-radius: 32px;
 }
 
 .donate-container>a {
+    display: flex;
+    align-items: center;
     color: #fff;
+    background-color: #FF3D9A;
+    border-radius: 60px;
+    padding: 0.8em 1.4em;
 }
 
-.donate-container>img {
-    align-self: center;
-    margin-right: 10px;
+.donate-container a img {
+    height: 1em;
+    width: 1.1em;
+    margin-right: 0.50em;
+}
+
+#container-logotype-header {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1145px) {
+    header {
+        padding: 0 5vw;
+    }
+}
+
+@media (min-width: 580px) and (max-width: 970px) {
+    header {
+        font-size: 0.8em;
+        padding: 0 5vw;
+    }
+    #items-menu a{
+        margin: 5px 5px 5px 5px;
+    }
+}
+
+@media (max-width: 580px) {
+    header {
+        font-size: 1.0em;
+    }
+
+    #navegation-bar {
+        flex-direction: column;
+    }
+
+    #principal-menu {
+        flex-direction: column;
+    }
+
+    #second-menu {
+        align-self: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #items-menu a{
+        margin: 5px 15px 5px 15px;
+    }
+
+    #items-menu{
+        width: 100%;
+    }
+
+    #container-logotype-header>img{
+        height: 50px;
+        width: 50px;
+    }
 }
