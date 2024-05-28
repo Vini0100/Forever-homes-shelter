@@ -3,3 +3,47 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#navegation-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 3px solid black;
+}
+
+header {
+    padding: 0 10em;
+    font-size: 1.8em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+#second-menu {
+    display: flex;
+    align-items: center;
+}
+
+#second-menu>a {
+    padding: 16px 32px;
+    margin-left: 1em;
+}
+
+#principal-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#items-menu a{
+    margin-left: 0.55em;
+}
+
+.donate-item {
+    color: #fff;
+    background-color: #FF3D9A;
+    border-radius: 32px;
+}
