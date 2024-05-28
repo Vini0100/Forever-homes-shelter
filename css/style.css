@@ -15,7 +15,7 @@
 
 header {
     padding: 0 10em;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 header a {
@@ -40,6 +40,7 @@ header a {
 
 #items-menu a{
     margin-left: 0.55em;
+    color: #000;
 }
 
 #phone-container {
