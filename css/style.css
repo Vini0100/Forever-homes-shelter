@@ -12,14 +12,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 1.6em 0;
     background-color: #fff;
-    border-bottom: 3px solid black;
+    border-bottom: 5px solid black;
 }
 
 header {
-    padding: 0 10em;
-    font-size: 1.5em;
+    padding: 0 25em;
+    font-size: 2.1em;
     font-family: "Inter", sans-serif;
     font-weight: 700;
 }
@@ -34,8 +34,8 @@ header a {
 }
 
 #second-menu>.donate-container {
-    padding: 16px 32px;
-    margin-left: 1em;
+    padding: 28px 52px;
+    margin-left: 1.5em;
 }
 
 #principal-menu {
@@ -45,7 +45,7 @@ header a {
 }
 
 #items-menu a{
-    margin-left: 0.55em;
+    margin-left: 0.70em;
     color: #000;
 }
 
@@ -54,6 +54,8 @@ header a {
 }
 
 #phone-container>img {
+    width: 28px;
+    height: 28px;
     align-self: center;
     margin-right: 15px;
 }
@@ -61,7 +63,7 @@ header a {
 .donate-container {
     display: flex;
     background-color: #FF3D9A;
-    border-radius: 32px;
+    border-radius: 60px;
 }
 
 .donate-container>a {
@@ -69,6 +71,8 @@ header a {
 }
 
 .donate-container>img {
+    width: 40px;
+    height: 36px;
     align-self: center;
-    margin-right: 10px;
+    margin-right: 15px;
 }
