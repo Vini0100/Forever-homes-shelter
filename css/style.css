@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-header, main {
+header, #main-screen {
     padding: 0 116px;
     max-width: 1512px;
     font-size: 20px;
@@ -16,6 +16,10 @@ header, main {
     font-weight: 700;
     margin: 0 auto;
     width: 100%;
+}
+
+header, #main-screen {
+    background-color: #F5F5F5;
 }
 
 header {
@@ -32,7 +36,7 @@ a {
     width: 100%;
 }
 
-main div.center-container {
+#main-screen div.center-container {
     display: flex;
     max-height: 816px;
     min-height: 816px;
@@ -43,6 +47,8 @@ header nav.center-container {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
+    position: relative;
+    z-index: 1;
 }
 
 #second-menu {
@@ -94,7 +100,6 @@ header nav.center-container {
     display: flex;
     align-items: center;
     color: #1E1F27;
-    background-color: #fff;
     border: 2px solid #1E1F27;
     border-radius: 32px;
     font-family: "Poppins", sans-serif;
@@ -134,7 +139,7 @@ header .donate-container>a {
     max-width: 100%;
 }
 
-main .donate-container>a {
+#main-screen .donate-container>a {
     padding: 16px 28px;
     height: 64px;
     width: 177px;
