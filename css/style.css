@@ -16,7 +16,7 @@ a {
 
 /* background-color */
 
-header, #main-screen {
+header, #main-screen, #adopt-info-block {
     background-color: #F5F5F5;
 }
 
@@ -299,20 +299,17 @@ header div .donate-container>a {
     letter-spacing: -2%;
     width: 100%;
     max-height: 134px;
-    border: 1px solid red;
 }
 
 #stats {
     display: flex;
     max-height: 144px;
     height: 100%;
-    border: 1px solid red;
 }
 
 #stats div{
     display: flex;
     flex-flow: row wrap;
-    border: 1px solid red;
     justify-content: center;
 }
 
@@ -338,6 +335,7 @@ header div .donate-container>a {
 }
 
 /* Donations block */ 
+
 #donation-block section.center-container {
     display: flex;
     flex-flow: column wrap;
@@ -363,7 +361,79 @@ header div .donate-container>a {
     margin-top: 80px;
 }
 
+/* Adopt info block */
 
+#adopt-info-block section>h2 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    color: #1E1F27;
+    margin-bottom: 24px;
+}
+
+#adopt-info-block section>div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#adopt-info-block section>div div:last-child {
+    padding: 16px 18px;
+}
+
+#adopt-info-block section>div div:last-child nav{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 584px;
+    row-gap: 20px;
+}
+
+#adopt-info-block section>div div:last-child nav>h4{
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 51.2px;
+    letter-spacing: -2%;
+}
+
+#adopt-info-block section>div div:last-child nav>ul>li{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #37383F;
+    font-size: 24px;
+    line-height: 38.4px;
+    list-style-position: outside;
+}
+
+#adopt-info-block section>div div:last-child nav>ul>li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+#adopt-info-block section>div div:last-child a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    padding: 16px 32px;
+    background-color: #1E1F27;
+    border-radius: 32px;
+    align-self: flex-start;
+    max-width: 64px;
+    max-width: 217px;
+}
+
+#adopt-info-block section>div div:last-child {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 40.5px 0;
+}
+
+
+#adopt-info-block section>div div:first-child {
+    padding: 16px 18px;
+    max-height: 616px;
+}
 
 
 
