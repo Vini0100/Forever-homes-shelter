@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-header, #main-screen {
+header, #main-screen, #stats-block {
     padding: 0 116px;
     max-width: 1512px;
     font-size: 20px;
@@ -16,6 +16,10 @@ header, #main-screen {
     font-weight: 700;
     margin: 0 auto;
     width: 100%;
+}
+
+#stats-block {
+    background-color: #1E1F27;
 }
 
 header, #main-screen {
@@ -40,6 +44,67 @@ a {
     display: flex;
     max-height: 816px;
     min-height: 816px;
+}
+
+#stats-block div.center-container {
+    display: flex;
+    max-height: 924px;
+    min-height: 924px;
+    padding: 80px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+#stats-block div.center-container>div {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+}
+
+#stats-block div.center-container>div>h2 {
+    font-size: 56px;
+    line-height: 67.2px;
+    letter-spacing: -2%;
+    max-height: 134px;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-between;
+    max-height: 144px;
+    height: 100%;
+}
+
+#stats div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    min-width: 376px;
+    min-height: 144px;
+}
+
+#stats div>h4{
+    color: #F8DB46;
+    font-size: 64px;
+    line-height: 76.8px;
+    letter-spacing: -2%;
+}
+
+#stats div>p{
+    font-size: 32px;
+    line-height: 51.2px;
+    letter-spacing: -2%;
+}
+
+#carousel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    max-height: 326px;
+    height: 100%;
 }
 
 header nav.center-container {
