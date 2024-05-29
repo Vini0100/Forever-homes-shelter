@@ -217,6 +217,9 @@ header div .donate-container>a {
 
 #main-content {
     display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #info-block {
@@ -294,22 +297,23 @@ header div .donate-container>a {
     font-size: 56px;
     line-height: 67.2px;
     letter-spacing: -2%;
+    width: 100%;
     max-height: 134px;
+    border: 1px solid red;
 }
 
 #stats {
     display: flex;
-    justify-content: space-between;
     max-height: 144px;
     height: 100%;
+    border: 1px solid red;
 }
 
 #stats div{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    min-width: 376px;
-    min-height: 144px;
+    flex-flow: row wrap;
+    border: 1px solid red;
+    justify-content: center;
 }
 
 #stats div>h4{
