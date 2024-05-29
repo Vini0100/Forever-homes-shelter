@@ -52,7 +52,7 @@ a {
     font-weight: 700;
 }
 
-#stats-block div.center-container>div {
+#stats-block div.center-container>section {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -61,7 +61,7 @@ a {
     color: #fff;
 }
 
-#stats-block div.center-container>div>h2 {
+#stats-block div.center-container>section>h2 {
     font-size: 56px;
     line-height: 67.2px;
     letter-spacing: -2%;
