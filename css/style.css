@@ -315,6 +315,12 @@ header div .donate-container>a {
     max-width: 584px;
 }
 
+#info-block section:first-child {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
 #info-block section:first-child h1 {
     font-family: "Poppins", sans-serif;
     font-size: 64px;
