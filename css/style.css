@@ -17,7 +17,7 @@ a {
 
 /* background-color */
 
-header, #main-screen, #adopt-info-block {
+header, #main-screen, #adopt-info-block, footer {
     background-color: #F5F5F5;
 }
 
@@ -188,6 +188,23 @@ header, #main-screen, #adopt-info-block {
 #cards-difference .card-difference:nth-child(4) a {
     background-color: #5758F1;
     color: #fff;
+}
+
+.item-contact {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px
+}
+
+.item-contact div {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    border: 2px solid #1E1F27;
 }
 
 /* Header */
@@ -671,6 +688,8 @@ header div .donate-container>a {
     height: 309px;  
 }
 
+/* Subscription block */
+
 #subscription-block section {
     display: flex;
     flex-direction: column;
@@ -738,9 +757,112 @@ header div .donate-container>a {
     color: #1E1F27;
 }
 
+/* Footer */
 
+footer nav.center-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    height: fit-content;
+}
 
+#footer-links-block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+ }
 
+#footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+}
+
+#footer-links ul {
+    width: 272px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#footer-links ul>li {
+    line-height: 32px;
+    text-align: left;
+
+}
+
+#footer-logo {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 19px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-align: left;
+    width: 272px;
+}
+
+#footer-logo div {
+    height: 100px;
+    width: 100px;
+}
+
+#footer-logo div>img {
+    width: 100%;
+    height: 100%;
+    height: inherit;
+    display: block;
+    margin: 0 auto;
+}
+
+#footer-logo p:first-of-type {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+#footer-logo p:first-of-type img {
+    height: 29.04;
+    width: 26.03;
+    margin: auto 0;
+}
+
+#footer-logo p:last-of-type {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+#footer-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 272px;
+    gap: 24px;
+}
+
+#items-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+#footer-contact div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer nav>p {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 51.2px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+footer nav>p>span {
+    color: #FF3D9A;
+}
 
 
 /* Media queries */
