@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 /* Elements */
 
@@ -22,6 +23,10 @@ header, #main-screen, #adopt-info-block {
 
 #stats-block, #donation-block, #difference-block, #adopt-block {
     background-color: #1E1F27;
+}
+
+#subscription-block {
+    background-color: #5758F1;
 }
 
 /* class */
@@ -665,6 +670,74 @@ header div .donate-container>a {
     width: 313px;
     height: 309px;  
 }
+
+#subscription-block section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    gap: 60px;
+}
+
+#subscription-block div>h2 {
+    margin-bottom: 12px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 56px;
+    letter-spacing: -2%;
+    line-height: 67.2px;
+    color: #fff;
+}
+
+#subscription-block div>p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#subscription-block div>p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+#subscribe-form input {
+    outline: none;
+    border-radius: 32px;
+    border: 2px solid #fff;
+    padding: 16px 136px 16px 24px;
+    background-color: #5758F1;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+#subscribe-form input::placeholder {
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#subscribe-form button {
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 16px 32px;
+    border-radius: 32px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    line-height: 32px;
+    color: #1E1F27;
+}
+
 
 
 
