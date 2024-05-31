@@ -13,6 +13,11 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* background-color */
@@ -220,7 +225,8 @@ header, #main-screen, #adopt-info-block, footer {
 }
 
 .input-modal-text label,
-.input-modal-birth label {
+.input-modal-birth label,
+#payment-donate>label {
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
@@ -230,7 +236,8 @@ header, #main-screen, #adopt-info-block, footer {
 }
 
 .input-modal-text label span,
-.input-modal-birth label span {
+.input-modal-birth label span,
+#payment-donate>label span {
     color: #3F96FC;
 }
 
@@ -275,7 +282,7 @@ header, #main-screen, #adopt-info-block, footer {
     justify-content: space-between;
 }
 
-#terms {
+#terms, .custom-check {
     display: none;
 }
 
@@ -283,23 +290,14 @@ header, #main-screen, #adopt-info-block, footer {
     display: flex;
     width: 24px;
     height: 24px;
-    background-color: #37383F;
     background-size: cover;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 99px;
     align-items: center;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.6s ease;
 }
 
-#terms:checked + .custom-radio {
-    background-color: #04C27F;
-    background-image: url('/img/Checked.svg');
-    background-size: 11.73px 8.94px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.buttom-adopt {
+.button-adopt {
     padding: 16px 24px;
     border-radius: 8px;
     opacity: 0px;
@@ -316,12 +314,48 @@ header, #main-screen, #adopt-info-block, footer {
     color: #F5F5F5;
 }
 
-.buttom-adopt:first-of-type {
+.button-adopt:first-of-type {
     background-color: #04C27F;
 }
 
-.buttom-adopt:last-of-type {
+.button-adopt:last-of-type {
     background-color: #37383F;
+}
+
+.type-payment {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.payment-item {
+    display: flex;
+    gap: 8px;
+    border: 1px solid #3F96FC;
+    border-radius: 8px;
+    padding: 16px;
+    align-items: center;
+}
+
+.payment-label, #apply-adopt-modal-container>form>div:last-child>div>label {
+    cursor: pointer;
+}
+
+.bt-default-donate-modal {
+    padding: 16px 32px;
+    display: flex;
+    gap: 8px;
+    border-radius: 32px;
+    align-self: center;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    font-family: 'Poppins';
+    border: none;
+    font-size: 20px;
 }
 
 /* Header */
@@ -962,7 +996,7 @@ footer nav>p>span {
     color: #FF3D9A;
 }
 
-/* Modal */ 
+/* Modal Apply to adopt */ 
 
 #apply-adopt-modal {
     margin: auto auto;
@@ -1028,6 +1062,88 @@ footer nav>p>span {
     color: #FF3D9A;
 }
 
+#apply-adopt-modal .custom-radio, #donate-modal .custom-radio {
+    background-color: #37383F;
+}
+
+#terms:checked + .custom-radio {
+    background-color: #04C27F;
+    background-image: url('/img/Checked.svg');
+    transition: background-image 0.6s ease;
+    background-size: 11.73px 8.94px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Modal Donate */
+
+#donate-modal {
+    margin: auto auto;
+    border: none;
+    border-radius: 32px;
+}
+
+#donate-modal #donate-container-modal {
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 48px;
+    font-family: 'Poppins';
+    align-items: center;
+}
+
+#donate-modal #donate-container-modal>h1 {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.02em;
+    color: #1E1F27;
+}
+
+#donate-modal #donate-container-modal>form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 24px;    
+}
+
+#money {
+    text-align: right;
+}
+
+#payment-donate {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+
+#donate-modal .custom-check:checked + .custom-radio {
+    background-color: #FF3D9A;
+    background-image: url('/img/Checked.svg');
+    background-size: 11.73px 8.94px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.6s ease, background-image 0.6s ease;
+}
+
+.payment-item.checked {
+    background-color: #3F96FC;
+    color: #fff;
+    transition: background-color 0.6s ease, background-image 0.6s ease;
+}
+
+#donate-modal #donate-container-modal>form>button:first-of-type {
+    background-color: #FF3D9A;
+}
+
+#donate-modal #donate-container-modal>form>button:last-of-type {
+    background-color: #37383F;
+}
+
+
+
+
 
 /* Media queries */
 
@@ -1036,4 +1152,3 @@ footer nav>p>span {
         padding: 0 5vw;
     }
 } */
-
