@@ -13,6 +13,11 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 /* background-color */
@@ -213,6 +218,146 @@ header, #main-screen, #adopt-info-block, footer {
     border: 2px solid #1E1F27;
 }
 
+.input-modal-text, .input-modal-birth {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+
+.input-modal-text label,
+.input-modal-birth label,
+#payment-donate>label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: #FF3D9A;
+    font-family: 'Poppins';
+}
+
+.input-modal-text label span,
+.input-modal-birth label span,
+#payment-donate>label span {
+    color: #3F96FC;
+}
+
+.input-modal-text>input,
+.input-modal-birth div>div {
+    outline: none;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #937AFF;
+    color: #1E1F27;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    font-family: 'Poppins';
+}
+
+.input-modal-birth div>div>select {
+    outline: none;
+    border: none;
+    color: #1E1F27;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    font-family: 'Poppins';
+}
+
+.input-modal-birth div>div {
+    width: 100%;
+}
+
+.input-modal-text>input:placeholder {
+    color: #37383F;
+}
+
+.input-modal-birth>div {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+#terms, .custom-check {
+    display: none;
+}
+
+.custom-radio {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 99px;
+    align-items: center;
+    transition: background-color 0.6s ease;
+}
+
+.button-adopt {
+    padding: 16px 24px;
+    border-radius: 8px;
+    opacity: 0px;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #F5F5F5;
+}
+
+.button-adopt:first-of-type {
+    background-color: #04C27F;
+}
+
+.button-adopt:last-of-type {
+    background-color: #37383F;
+}
+
+.type-payment {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.payment-item {
+    display: flex;
+    gap: 8px;
+    border: 1px solid #3F96FC;
+    border-radius: 8px;
+    padding: 16px;
+    align-items: center;
+}
+
+.payment-label, #apply-adopt-modal-container>form>div:last-child>div>label {
+    cursor: pointer;
+}
+
+.bt-default-donate-modal {
+    padding: 16px 32px;
+    display: flex;
+    gap: 8px;
+    border-radius: 32px;
+    align-self: center;
+    color: #fff;
+    align-items: center;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    font-family: 'Poppins';
+    border: none;
+    font-size: 20px;
+}
+
 /* Header */
 
 header div nav.center-container {
@@ -313,6 +458,12 @@ header div .donate-container>a {
     gap: 48px;
     align-self: center;
     max-width: 584px;
+}
+
+#info-block section:first-child {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
 }
 
 #info-block section:first-child h1 {
@@ -463,7 +614,7 @@ header div .donate-container>a {
 
 #adopt-info-block section>div {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 40px;
 }
@@ -484,7 +635,7 @@ header div .donate-container>a {
 #adopt-info-block section>div div:last-child nav{
     display: flex;
     flex-flow: row wrap;
-    width: 584px;
+    max-width: 584px;
     row-gap: 20px;
 }
 
@@ -845,6 +996,154 @@ footer nav>p>span {
     color: #FF3D9A;
 }
 
+/* Modal Apply to adopt */ 
+
+#apply-adopt-modal {
+    margin: auto auto;
+    border: none;
+    border-radius: 32px;
+}
+
+#apply-adopt-modal-container {
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 48px;
+    font-family: 'Poppins';
+}
+
+#apply-adopt-modal-container>div:first-child {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 4px;
+}
+
+#apply-adopt-modal-container>div:first-child>h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+#apply-adopt-modal-container>div:first-child>p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+#apply-adopt-modal-container>form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+#apply-adopt-modal-container>form>div:last-child {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+#apply-adopt-modal-container>form>div:last-child>div {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    color: #1E1F27;
+}
+
+#apply-adopt-modal-container>form>div:last-child>div>label>a {
+    color: #FF3D9A;
+}
+
+#apply-adopt-modal .custom-radio, #donate-modal .custom-radio {
+    background-color: #37383F;
+}
+
+#terms:checked + .custom-radio {
+    background-color: #04C27F;
+    background-image: url('/img/Checked.svg');
+    transition: background-image 0.6s ease;
+    background-size: 11.73px 8.94px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Modal Donate */
+
+#donate-modal {
+    margin: auto auto;
+    border: none;
+    border-radius: 32px;
+}
+
+#donate-modal #donate-container-modal {
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 48px;
+    font-family: 'Poppins';
+    align-items: center;
+}
+
+#donate-modal #donate-container-modal>h1 {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.02em;
+    color: #1E1F27;
+}
+
+#donate-modal #donate-container-modal>form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 24px;    
+}
+
+#money {
+    text-align: right;
+}
+
+#payment-donate {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+
+#donate-modal .custom-check:checked + .custom-radio {
+    background-color: #FF3D9A;
+    background-image: url('/img/Checked.svg');
+    background-size: 11.73px 8.94px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.6s ease, background-image 0.6s ease;
+}
+
+.payment-item.checked {
+    background-color: #3F96FC;
+    color: #fff;
+    transition: background-color 0.6s ease, background-image 0.6s ease;
+}
+
+#donate-modal #donate-container-modal>form>button:first-of-type {
+    background-color: #FF3D9A;
+}
+
+#donate-modal #donate-container-modal>form>button:last-of-type {
+    background-color: #37383F;
+}
+
+
+
+
 
 /* Media queries */
 
@@ -853,4 +1152,3 @@ footer nav>p>span {
         padding: 0 5vw;
     }
 } */
-
