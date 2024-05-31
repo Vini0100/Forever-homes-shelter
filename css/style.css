@@ -22,7 +22,7 @@ button {
 
 /* background-color */
 
-header, #main-screen, #adopt-info-block, footer {
+header, #success-screen, #main-screen, #adopt-info-block, footer {
     background-color: #F5F5F5;
 }
 
@@ -78,7 +78,6 @@ header, #main-screen, #adopt-info-block, footer {
     font-weight: 700;
     line-height: 32px;
     text-align: left;
-
 }
 
 .card-donation {
@@ -246,7 +245,7 @@ header, #main-screen, #adopt-info-block, footer {
     outline: none;
     padding: 16px;
     border-radius: 8px;
-    border: 1px solid #937AFF;
+    border: 1px solid #3F96FC;
     color: #1E1F27;
     font-size: 16px;
     font-weight: 500;
@@ -254,6 +253,11 @@ header, #main-screen, #adopt-info-block, footer {
     letter-spacing: -0.02em;
     text-align: left;
     font-family: 'Poppins';
+}
+
+.input-modal-text>input:focus,
+.input-modal-birth div:focus-within {
+    border-color: #937AFF;
 }
 
 .input-modal-birth div>div>select {
@@ -1141,8 +1145,66 @@ footer nav>p>span {
     background-color: #37383F;
 }
 
+/* Success screen */
 
+#success-screen {
+    height: 100vh;
+}
 
+#success-screen>div {
+    margin: 0 auto;
+    padding: 80px 120px;
+    max-width: 1512px; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#success-screen>div>a {
+    padding: 16px 32px;
+    gap: 19px;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #37383F;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#success-screen>div>a>img {
+    width: 12px;
+    height: 22px;
+}
+
+#success-screen>div>div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+#success-screen>div>div>h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76.8px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #1E1F27;
+}
+
+#success-screen>div>div>p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38.4px;
+    text-align: left;
+    font-family: "Inter";
+    font-weight: 500;
+    color: #37383F;
+}
 
 
 /* Media queries */
