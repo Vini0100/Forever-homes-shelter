@@ -36,6 +36,58 @@
         </div>
     </header>
 
+    <dialog id="apply-adopt-modal">
+        <div id="apply-adopt-modal-container">
+                <div>
+                    <h1>Apply to Adopt</h1>
+                    <p>Small text description can goes here</p>
+                </div>
+                <form>
+                    <div class="input-modal-text">
+                        <label for="email">EMAIL<span>*</span></label>
+                        <input placeholder="youremail@here|" type="email" id="email" name="email" required>
+                    </div>
+                
+                    <div class="input-modal-text">
+                        <label for="name">FULL NAME<span>*</span></label>
+                        <input placeholder="Your name" type="text" id="name" name="name" required>
+                    </div>
+                
+                    <div class="input-modal-birth">
+                        <label for="day">DATE OF BIRTH<span>*</span></label>
+                        <div>
+                            <div>
+                                <select id="day-bth" name="day" required>
+                                    <option disabled selected value=''>Day</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select id="month-bth" name="month" required>
+                                    <option value="" disabled selected>Month</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select id="year-bth" name="year" required>
+                                    <option disabled selected value=''>Year</option>";      
+                                </select>
+                            </div> 
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="custom-buttom">
+                                <input type="checkbox" id="terms" name="terms" value="1" required>
+                                <label for="terms" class="custom-radio"></label>
+                            </div>
+	                        <label for="terms">I agree with <a>Privacy Policy</a> and <a>Terms of Conditions</a></label><br>
+                        </div>
+                        <button class="buttom-adopt" type="submit"><img src="img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
+                        <button class="buttom-adopt" type="button" onclick="closeModal()"><img src="img/Arrow_left.svg" alt="Back">Cancel</button>
+                    </div>
+                </form>                
+        </div>
+    </dialog>
+
     <main>
         <div id="main-screen">
             <div class="screen-default">
@@ -57,7 +109,7 @@
                                         <a href="#"><img src="img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
                                     </div>
                                     <div id="apply-adopt">
-                                        <a href="#"><img src="img/Shape_dog.svg" alt="dog"><nav>Apply to Adopt</nav></a>
+                                        <a class="apply-adopt-button"><img src="img/Shape_dog.svg" alt="dog"><nav>Apply to Adopt</nav></a>
                                     </div>
                                 </div>
                             </section>

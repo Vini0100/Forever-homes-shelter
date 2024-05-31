@@ -213,6 +213,117 @@ header, #main-screen, #adopt-info-block, footer {
     border: 2px solid #1E1F27;
 }
 
+.input-modal-text, .input-modal-birth {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+
+.input-modal-text label,
+.input-modal-birth label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: #FF3D9A;
+    font-family: 'Poppins';
+}
+
+.input-modal-text label span,
+.input-modal-birth label span {
+    color: #3F96FC;
+}
+
+.input-modal-text>input,
+.input-modal-birth div>div {
+    outline: none;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #937AFF;
+    color: #1E1F27;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    font-family: 'Poppins';
+}
+
+.input-modal-birth div>div>select {
+    outline: none;
+    border: none;
+    color: #1E1F27;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    font-family: 'Poppins';
+}
+
+.input-modal-birth div>div {
+    width: 100%;
+}
+
+.input-modal-text>input:placeholder {
+    color: #37383F;
+}
+
+.input-modal-birth>div {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+#terms {
+    display: none;
+}
+
+.custom-radio {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-color: #37383F;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+#terms:checked + .custom-radio {
+    background-color: #04C27F;
+    background-image: url('/img/Checked.svg');
+    background-size: 11.73px 8.94px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttom-adopt {
+    padding: 16px 24px;
+    border-radius: 8px;
+    opacity: 0px;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #F5F5F5;
+}
+
+.buttom-adopt:first-of-type {
+    background-color: #04C27F;
+}
+
+.buttom-adopt:last-of-type {
+    background-color: #37383F;
+}
+
 /* Header */
 
 header div nav.center-container {
@@ -469,7 +580,7 @@ header div .donate-container>a {
 
 #adopt-info-block section>div {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 40px;
 }
@@ -490,7 +601,7 @@ header div .donate-container>a {
 #adopt-info-block section>div div:last-child nav{
     display: flex;
     flex-flow: row wrap;
-    width: 584px;
+    max-width: 584px;
     row-gap: 20px;
 }
 
@@ -848,6 +959,72 @@ footer nav>p {
 }
 
 footer nav>p>span {
+    color: #FF3D9A;
+}
+
+/* Modal */ 
+
+#apply-adopt-modal {
+    margin: auto auto;
+    border: none;
+    border-radius: 32px;
+}
+
+#apply-adopt-modal-container {
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 48px;
+    font-family: 'Poppins';
+}
+
+#apply-adopt-modal-container>div:first-child {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 4px;
+}
+
+#apply-adopt-modal-container>div:first-child>h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+#apply-adopt-modal-container>div:first-child>p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+#apply-adopt-modal-container>form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+#apply-adopt-modal-container>form>div:last-child {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+#apply-adopt-modal-container>form>div:last-child>div {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    color: #1E1F27;
+}
+
+#apply-adopt-modal-container>form>div:last-child>div>label>a {
     color: #FF3D9A;
 }
 
