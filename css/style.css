@@ -246,7 +246,7 @@ header, #main-screen, #adopt-info-block, footer {
     outline: none;
     padding: 16px;
     border-radius: 8px;
-    border: 1px solid #937AFF;
+    border: 1px solid #3F96FC;
     color: #1E1F27;
     font-size: 16px;
     font-weight: 500;
@@ -254,6 +254,11 @@ header, #main-screen, #adopt-info-block, footer {
     letter-spacing: -0.02em;
     text-align: left;
     font-family: 'Poppins';
+}
+
+.input-modal-text>input:focus,
+.input-modal-birth div:focus-within {
+    border-color: #937AFF;
 }
 
 .input-modal-birth div>div>select {
