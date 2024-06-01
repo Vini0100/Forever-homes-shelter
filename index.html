@@ -26,7 +26,7 @@
                 <div id="second-menu">
                     <div id="phone-container">
                         <img src="img/Shape_phone.svg" alt="Phone">
-                        <nav href="#">631-249-7325</nav>
+                        <nav>631-249-7325</nav>
                     </div>
                     <div class="donate-container">
                         <a class="donate-button" href="#"><img src="img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
@@ -37,59 +37,59 @@
     </header>
 
     <dialog id="apply-adopt-modal">
-        <div id="apply-adopt-modal-container">
-                <div>
-                    <h1>Apply to Adopt</h1>
-                    <p>Small text description can goes here</p>
+        <section id="apply-adopt-modal-container">
+               <div>
+                <h1>Apply to Adopt</h1>
+                <p>Small text description can goes here</p>
+            </div>
+            <form>
+                <div class="input-modal-text">
+                    <label for="email">EMAIL<span>*</span></label>
+                    <input placeholder="youremail@here|" type="email" id="email" name="email" required>
                 </div>
-                <form>
-                    <div class="input-modal-text">
-                        <label for="email">EMAIL<span>*</span></label>
-                        <input placeholder="youremail@here|" type="email" id="email" name="email" required>
-                    </div>
-                
-                    <div class="input-modal-text">
-                        <label for="name">FULL NAME<span>*</span></label>
-                        <input placeholder="Your name" type="text" id="name" name="name" required>
-                    </div>
-                
-                    <div class="input-modal-birth">
-                        <label for="day">DATE OF BIRTH<span>*</span></label>
-                        <div>
-                            <div>
-                                <select id="day-bth" name="day" required>
-                                    <option disabled selected value=''>Day</option>
-                                </select>
-                            </div>
-                            <div>
-                                <select id="month-bth" name="month" required>
-                                    <option value="" disabled selected>Month</option>
-                                </select>
-                            </div>
-                            <div>
-                                <select id="year-bth" name="year" required>
-                                    <option disabled selected value=''>Year</option>";      
-                                </select>
-                            </div> 
-                        </div>
-                    </div>
+            
+                <div class="input-modal-text">
+                    <label for="name">FULL NAME<span>*</span></label>
+                    <input placeholder="Your name" type="text" id="name" name="name" required>
+                </div>
+            
+                <div class="input-modal-birth">
+                    <label for="day">DATE OF BIRTH<span>*</span></label>
                     <div>
                         <div>
-                            <div>
-                                <input type="checkbox" id="terms" class="custom-check" name="terms" value="1" required>
-                                <label for="terms" class="custom-radio"></label>
-                            </div>
-	                        <label for="terms">I agree with <a>Privacy Policy</a> and <a>Terms of Conditions</a></label><br>
+                            <select id="day-bth" name="day" required>
+                                <option disabled selected value=''>Day</option>
+                            </select>
                         </div>
-                        <button class="button-adopt" type="submit"><img src="img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
-                        <button class="button-adopt" type="button" onclick="closeModal('apply-adopt-modal')"><img src="img/Arrow_left.svg" alt="Back">Cancel</button>
+                        <div>
+                            <select id="month-bth" name="month" required>
+                                <option value="" disabled selected>Month</option>
+                            </select>
+                           </div>
+                        <div>
+                            <select id="year-bth" name="year" required>
+                                <option disabled selected value=''>Year</option>";      
+                              </select>
+                        </div> 
                     </div>
-                </form>                
-        </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="terms" class="custom-check" name="terms" value="1" required>
+                            <label for="terms" class="custom-radio"></label>
+                        </div>
+	                    <label for="terms">I agree with <a>Privacy Policy</a> and <a>Terms of Conditions</a></label><br>
+                    </div>
+                    <button class="button-adopt" type="submit"><img src="img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
+                    <button class="button-adopt" type="button" onclick="closeModal('apply-adopt-modal')"><img src="img/Arrow_left.svg" alt="Back">Cancel</button>
+                </div>
+            </form>                
+        </section>
     </dialog>
 
     <dialog id="donate-modal">
-        <div id="donate-container-modal">
+        <section id="donate-container-modal">
             <h1>Choose your <br> Donate </h1>
             <form action="pages/success.html">
                 <div class="input-modal-text">
@@ -134,7 +134,7 @@
                 <button class="bt-default-donate-modal"><img src="img/Shape_donate.svg" alt="Heart">I wanna  Help!</button>
                 <button onclick="closeModal('donate-modal')" class="bt-default-donate-modal"><img src="img/Arrow_left.svg" alt="Back">Cancel</button>
             </form>
-        </div>
+        </section>
     </dialog>
 
     <main>
@@ -317,7 +317,7 @@
                                     <h5>Adopt or Foster</h5>
                                     <p>Provide a forever or temporary home to a homeless animal.</p>
                                 </div>
-                                <a href="">View Adoptables</a>
+                                <a href="/pages/adoptables.html">View Adoptables</a>
                             </div>
 
                             <div class="card-difference">
@@ -360,7 +360,7 @@
                         <div>
                             <h3>Browse our adorable adoptables</h3>
                             <div id="adopt-links">
-                                <a href="">View Adoptables</a>
+                                <a href="/pages/adoptables.html">View Adoptables</a>
                                 <a class="apply-adopt-button">Apply to Adopt</a>
                             </div>
                         </div>
@@ -380,8 +380,8 @@
                         <h2>Subscribe to our newsletter</h2>
                         <p>for updates on shelter events, fundraising parties, and heartwarming stories <br>of animals finding their forever homes.</p>
                     </div>
-                    <form id="subscribe-form">
-                        <input placeholder="Enter your email" type="email">
+                    <form id="subscribe-form" action="pages/success.html">
+                        <input placeholder="Enter your email" type="email" required>
                         <button type="submit">Subscribe</button>
                     </form>
                 </section>
