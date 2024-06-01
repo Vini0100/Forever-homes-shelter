@@ -368,33 +368,26 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
     gap: 12px;
 }
 
-.block-bk {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
+.block-bk img{
     border-radius: 32px;
 }
 
-.radius-bk {
+.radius-bk img {
     height: 250px;
     width: 250px;
-    padding: 0;
-    margin: 0;
     border-radius: 32px 250px 250px 250px;
 }
 
-.radius-bk img {
-    border-radius: 32px 250px 230px 230px;
-}
-
-.radius-bk-two {
+.radius-bk-two img {
     height: 250px;
     width: 250px;
     border-radius: 250px 32px 250px 250px;
 }
 
-.radius-bk-two img {
-    border-radius: 250px 32px 230px 230px;
+.radius-bk-three img {
+    height: 250px;
+    width: 250px;
+    border-radius: 250px; 
 }
 
 .block-bk img {
@@ -424,35 +417,35 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
     align-items: center;
 }
 
-.adopt-item:nth-child(1)>div {
+.adopt-item:nth-child(1)>div>img {
     background-color: #F1D06E;
 }
 
-.adopt-item:nth-child(2)>div {
+.adopt-item:nth-child(2)>div>img {
     background-color: #04C27F;
 }
 
-.adopt-item:nth-child(3)>div {
+.adopt-item:nth-child(3)>div>img {
     background-color: #F5F5F5;
 }
 
-.adopt-item:nth-child(4)>div {
+.adopt-item:nth-child(4)>div>img {
     background-color: #5758F1;
 }
 
-.adopt-item:nth-child(5)>div {
+.adopt-item:nth-child(5)>div>img {
     background-color: #937AFF;
 }
 
-.adopt-item:nth-child(6)>div {
+.adopt-item:nth-child(6)>div>img {
     background-color: #41CC4F;
 }
 
-.adopt-item:nth-child(7)>div {
+.adopt-item:nth-child(7)>div>img {
     background-color: #F8DB46;
 }
 
-.adopt-item:nth-child(8)>div {
+.adopt-item:nth-child(8)>div>img {
     background-color: #FF3D9A;
 }
 
@@ -476,6 +469,84 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
     height: 22px;
 }
 
+.carousel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 4);
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper, #carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dots {
+    display: flex;
+    gap: 16px;
+    list-style-type: none;
+}
+
+.dots li {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--transparent-min, #FFFFFF33);
+}
+
+.bt-carousel {
+    max-width: 44px;
+    width: 100%;
+    height: 44px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.wrapper .bt-carousel img {
+    height: 12px;
+    width: 18px;
+}
+
+.adopt-item-carousel-one>div>img {
+    background-color: #F1D06E;
+}
+
+.adopt-item-carousel-two>div>img {
+    background-color: #04C27F;
+}
+
+.adopt-item-carousel-three>div>img {
+    background-color: #F5F5F5;
+}
+
+.adopt-item-carousel-four>div>img {
+    background-color: #5758F1;
+}
+
+.adopt-item-carousel-five>div>img {
+    background-color: #FF3D9A;
+}
 
 /* Header */
 
@@ -681,11 +752,20 @@ header div .donate-container>a {
     letter-spacing: -0.02em;
 }
 
-#carousel {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+#carousel-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
 }
+
+#dot-checked {
+    background-color: #fff;
+}
+
+#bt-right img {
+    transform: scaleX(-1);
+}  
 
 /* Donations block */ 
 
@@ -1335,8 +1415,14 @@ header div nav.borderNone {
 
 /* Media queries */
 
-/* @media (max-width: 1145px) {
-    header, main {
-        padding: 0 5vw;
+@media screen and (max-width: 1400px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc(100% / 3);
     }
-} */
+}
+
+@media screen and (max-width: 1140px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc(100% / 1);
+    }
+}
