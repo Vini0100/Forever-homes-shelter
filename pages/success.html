@@ -25,8 +25,7 @@
 
                 <div id="second-menu">
                     <div id="phone-container">
-                        <img src="/img/Shape_phone.svg" alt="Phone">
-                        <nav href="#">631-249-7325</nav>
+                        <p><img src="/img/Shape_phone.svg" alt="Phone"><span>631-249-7325</span></p>
                     </div>
                     <div class="donate-container">
                         <a class="donate-button" href="#"><img src="/img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
@@ -42,7 +41,7 @@
                 <h1>Apply to Adopt</h1>
                 <p>Small text description can goes here</p>
             </div>
-            <form>
+            <form action="/pages/adoptables.html">
                 <div class="input-modal-text">
                     <label for="email">EMAIL<span>*</span></label>
                     <input placeholder="youremail@here|" type="email" id="email" name="email" required>
@@ -123,7 +122,8 @@
                         </div>
                 
                         <div class="payment-item">
-                            <label for="paypal" class="payment-label">Paypal</label>
+                            <label for="paypal" class="payment-label hidden-word">Paypal</label>
+                            <label for="paypal" class="payment-label break-word">Pay<br>pal</label>
                             <div>
                                 <input type="radio" id="paypal" class="custom-check" name="payment_method" value="3" required>
                                 <label for="paypal" class="custom-radio"></label>
@@ -141,9 +141,14 @@
         <section id="success-screen">
             <div>
                 <a class="bt-back" href="/index.html"><img src="/img/Arrow_left.svg" alt="Back">Back</a>
-                <div>
-                    <h1>Success!</h1>
-                    <p>Free your creativity and create a beautiful success <br> page to thank your user for subscribing/donating <br> to our project.</p>
+                <div class="success-layout">
+                    <div>
+                        <h1>Success!</h1>
+                        <p>Thanks for helping to contribute!</p>
+                    </div>
+                    <div>
+                        <img src="/img/Checked.svg" alt="Checked">
+                    </div>
                 </div>
             </div>
         </section>

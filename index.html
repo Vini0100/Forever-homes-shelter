@@ -25,8 +25,7 @@
 
                 <div id="second-menu">
                     <div id="phone-container">
-                        <img src="img/Shape_phone.svg" alt="Phone">
-                        <nav>631-249-7325</nav>
+                        <p><img src="img/Shape_phone.svg" alt="Phone"><span>631-249-7325</span></p>
                     </div>
                     <div class="donate-container">
                         <a class="donate-button" href="#"><img src="img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
@@ -40,9 +39,9 @@
         <section id="apply-adopt-modal-container">
                <div>
                 <h1>Apply to Adopt</h1>
-                <p>Small text description can goes here</p>
+                <p>Provide a forever or temporary <br> home to a homeless animal.</p>
             </div>
-            <form>
+            <form action="pages/adoptables.html">
                 <div class="input-modal-text">
                     <label for="email">EMAIL<span>*</span></label>
                     <input placeholder="youremail@here|" type="email" id="email" name="email" required>
@@ -123,7 +122,8 @@
                         </div>
                 
                         <div class="payment-item">
-                            <label for="paypal" class="payment-label">Paypal</label>
+                            <label for="paypal" class="payment-label hidden-word">Paypal</label>
+                            <label for="paypal" class="payment-label break-word">Pay<br>pal</label>
                             <div>
                                 <input type="radio" id="paypal" class="custom-check" name="payment_method" value="3" required>
                                 <label for="paypal" class="custom-radio"></label>
@@ -139,57 +139,56 @@
 
     <main>
         <div id="main-screen">
-            <div class="screen-default">
-                <div class="center-container padding-default-two">
-                    <div id="main-content">
-                        <div id="info-block">
-                            <section>
-                                <h1>
-                                    Forever Homes Shelter
-                                </h1>
-                                <p>
-                                    Our mission is to rescue and provide rehabilitation to dogs and cats that are critically injured or neglected. We have already saved the lives of 10,000 animals. We are not just a rescue, we are a refuge.
-                                </p>
-                            </section>
-                            <section>
-                                <h3>Your Gift Helps Save Lives</h3>
-                                <div>
-                                    <div class="donate-container">
-                                        <a class="donate-button"><img src="img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
-                                    </div>
-                                    <div id="apply-adopt">
-                                        <a class="apply-adopt-button"><img src="img/Shape_dog.svg" alt="dog"><nav>Apply to Adopt</nav></a>
-                                    </div>
-                                </div>
-                            </section>
+            <div class="screen-default padding-default-two">
+                <section class="center-container">
+                    <div class="main-text">
+                        <div>
+                            <h1>Forever Homes Shelter</h1>
+                            <p>Our mission is to rescue and provide rehabilitation to dogs and cats that are critically injured or neglected. We have already saved the lives of 10,000 animals. We are not just a rescue, we are a refuge.</p>
                         </div>
-                        <div id="info-img">
-                            <img src="img/Image_dog_cat_house.png" alt="Dog and Cat">
+                        <div class="mobile_dog">
+                            <img src="/img/Dog_mobile.svg" alt="Dog">
+                        </div>
+                        <div>
+                            <h3>Your Gift Helps Save Lives</h3>
+                            <div>
+                                <div class="donate-container">
+                                    <a class="donate-button"><img src="img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
+                                </div>
+                                <div id="apply-adopt">
+                                    <a class="apply-adopt-button"><img src="img/Shape_dog.svg" alt="dog"><nav>Apply to Adopt</nav></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="main-img">
+                        <img src="img/Image_dog_cat_house.png" alt="Dog and Cat">
+                    </div>
+                </section>
             </div>
         </div>
 
-        <div id="stats-block">
-            <div class="screen-default">
-                <div class="center-container padding-default">
-                    <section>
-                        <h2>With your help, we <br>accomplished these goals</h2>
-                        <div id="stats">
-                            <div>
-                                <h4>1400</h4>
-                                <p>Animals Rescued</p>
-                            </div>
-                            
-                            <div>
-                                <h4>$1.4 Million</h4>
-                                <p>Raised</p>
-                            </div>
 
-                            <div>
-                                <h4>940</h4>
-                                <p>Tails Found a Home</p>
+        <div id="stats-block">
+            <div class="screen-default padding-default">
+                <section class="center-container">
+                        <div class="stats-text">
+                            <h2>With your help, we <br> accomplished these goals</h2>
+                            <div id="stats">
+                                <div>
+                                    <h4>1400</h4>
+                                    <p>Animals Rescued</p>
+                                </div>
+                                
+                                <div>
+                                    <h4>$1.4 Million</h4>
+                                    <p>Raised</p>
+                                </div>
+
+                                <div>
+                                    <h4>940</h4>
+                                    <p>Tails Found a Home</p>
+                                </div>
                             </div>
                         </div>
                         <div id="carousel-container">
@@ -227,7 +226,6 @@
                             </ul>
                         </div>
                     </section>
-                </div>
             </div>
         </div>
 
@@ -372,23 +370,33 @@
         </div>
 
         <div id="adopt-block">
-            <div class="screen-default padding-default-two">
-                <section class="center-container">
-                    <div id="cat-adopt">
+            <div class="padding-default-two">
+                <section>
+                    <div class="cat-adopt hidden-img">
                         <img src="img/Fish.png" alt="Fish">
                         <img src="img/Cat_adopt.png" alt="Cat">
                     </div>
                     <div id="adopt-text">                        
                         <h2>Find your <span>best friend</span> today!</h2>
                         <div>
-                            <h3>Browse our adorable adoptables</h3>
-                            <div id="adopt-links">
-                                <a href="/pages/adoptables.html">View Adoptables</a>
-                                <a class="apply-adopt-button">Apply to Adopt</a>
+                            <div class="cat-adopt hidden-img-mobile">
+                                <img src="img/Fish_mobile.svg" alt="Fish">
+                                <img src="img/Cat_mobile_adopt.png" alt="Cat">
+                            </div>
+                            <div class="adopt-subtext">
+                                <h3>Browse our adorable adoptables</h3>
+                                    <div id="adopt-links">
+                                        <a href="/pages/adoptables.html">View Adoptables</a>
+                                        <a class="apply-adopt-button">Apply to Adopt</a>
+                                    </div>
+                            </div> 
+                            <div class="dog-adopt hidden-img-mobile">
+                                <img src="img/Bone_adopt.png" alt="Bone">
+                                <img src="img/Dog_mobile_adopt.png" alt="Dog">
                             </div>
                         </div>
                     </div>
-                    <div id="dog-adopt">
+                    <div class="dog-adopt hidden-img">
                         <img src="img/Bone_adopt.png" alt="Bone">
                         <img src="img/Dog_adopt.png" alt="Dog">
                     </div>
@@ -425,21 +433,21 @@
                     </div>
                     <div id="footer-links">
                         <ul>
-                            <li>Adopt a Pet</li>
-                            <li>Adoptable Dogs</li>
-                            <li>Adoptable Cats</li>
-                            <li>Become a Foster</li>
-                            <li>Rescue Center</li>
-                            <li>Get Involved</li>
+                            <li><a class="apply-adopt-button">Adopt a Pet</a></li>
+                            <li><a href="#">Adoptable Dogs</a></li>
+                            <li><a href="#">Adoptable Cats</a></li>
+                            <li><a href="#">Become a Foster</a></li>
+                            <li><a href="#">Rescue Center</a></li>
+                            <li><a href="#">Get Involved</a></li>
                         </ul>
                         <ul>
-                            <li>Ways to Donate</li>
-                            <li>Upcoming Events</li>
-                            <li>Outreach Programs</li>
-                            <li>Who We Are</li>
-                            <li>Contact Us</li>
-                            <li>Shop With Purpose</li>
-                        </ul>
+                            <li><a href="#">Ways to Donate</a></li>
+                            <li><a href="#">Upcoming Events</a></li>
+                            <li><a href="#">Outreach Programs</a></li>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shop With Purpose</a></li>
+                        </ul>                        
                         </div>
                         <div id="footer-contact">
                             <div id="items-contact">
