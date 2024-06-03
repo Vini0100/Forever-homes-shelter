@@ -264,7 +264,8 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
 .input-modal-birth div>div>select {
     outline: none;
     border: none;
-    color: #1E1F27;
+    color: #37383F;
+    opacity: 70%;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;

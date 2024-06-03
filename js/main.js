@@ -10,7 +10,7 @@ function passAplyAdopt() {
     const btApplyAdopt = document.getElementsByClassName("apply-adopt-button");
 
     for (let i = 0; i < btApplyAdopt.length; i++) {
-        btApplyAdopt[i].addEventListener('click', function() {
+        btApplyAdopt[i].addEventListener("click", function() {
             birthFunctions();
             modalApplyAdopt.showModal();
         });
@@ -22,7 +22,7 @@ function passDonate() {
     const btDonate = document.getElementsByClassName("donate-button");
 
     for (let i = 0; i < btDonate.length; i++) {
-        btDonate[i].addEventListener('click', function() {
+        btDonate[i].addEventListener("click", function() {
             modalDonate.showModal();
         });
     }    
@@ -75,43 +75,64 @@ function populateYears() {
     }
 }
 
+const daySelect = document.getElementById("day-bth");
+const monthSelect = document.getElementById("month-bth");
+const yearSelect = document.getElementById("year-bth");
+daySelect.addEventListener("blur", () => updateSelectStyle(daySelect));
+monthSelect.addEventListener("blur", () => updateSelectStyle(monthSelect));
+yearSelect.addEventListener("blur", () => updateSelectStyle(yearSelect));
+
+function updateSelectStyle(selectElement) {
+    if (selectElement.selectedIndex !== 0) {
+        selectElement.style.color = "#1E1F27";
+        selectElement.style.opacity = "unset";
+    }
+}
+
 // Money
 
-const moneyInput = document.getElementById('money');
+const moneyInput = document.getElementById("money");
 
-moneyInput.addEventListener('blur', function() {
-    let value = moneyInput.value.trim();
+moneyInput.addEventListener("click", () => {
+    moneyInput.value = "";
+});
 
-    if (value.startsWith('R$')) {
-        value = value.slice(2).trim();
-    }
-    value = value.replace(',', '.');
-
-    const isNumber = !isNaN(value) && value !== '';
-    if (isNumber) {
-        moneyInput.value = `R$ ${parseFloat(value).toFixed(2)}`;
+moneyInput.addEventListener("blur", () => {
+    const currencyFormatter = (lang, currency, balance) => {
+        return Intl.NumberFormat(lang, {
+            style: "currency",
+            maximumFractionDigits: 2,
+            currency,
+        }).format(balance);
+    };
+    const value = moneyInput.value.replace(",", ".");
+    const numberValue = parseFloat(value);
+    if (!isNaN(numberValue)) {
+        moneyInput.value = currencyFormatter("pt-BR", "BRL", numberValue);
     } else {
-        moneyInput.value = '';
+        moneyInput.value = "";
     }
 });
+
 
 // Event Payment button
 
-document.addEventListener('DOMContentLoaded', () => {
-    const radios = document.querySelectorAll('.custom-check');
+document.addEventListener("DOMContentLoaded", () => {
+    const radios = document.querySelectorAll(".custom-check");
 
-    radios.forEach(radio => {
-        radio.addEventListener('change', () => {
-            const paymentItems = document.querySelectorAll('.payment-item');
-            paymentItems.forEach(item => {
-                item.classList.remove('checked');
-            });
-            if (radio.checked) {
-                radio.closest('.payment-item').classList.add('checked');
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].addEventListener("change", () => {
+            const paymentItems = document.querySelectorAll(".payment-item");
+            for (let j = 0; j < paymentItems.length; j++) {
+                paymentItems[j].classList.remove("checked");
+            }
+            if (radios[i].checked) {
+                radios[i].closest(".payment-item").classList.add("checked");
             }
         });
-    });
+    }
 });
+
 
 /* Carousel */
 
@@ -157,7 +178,8 @@ arrowBtns.forEach(btn => {
         dotChange(btn.id);
     });
 });
-const infiniteScroll = () => {
+
+carousel.addEventListener("scroll", () => {
     if(carousel.scrollLeft === 0) {
         carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
@@ -168,8 +190,8 @@ const infiniteScroll = () => {
         carousel.scrollLeft = carousel.offsetWidth;
         carousel.classList.remove("no-transition");
     }
-}
+});
 
-carousel.addEventListener("scroll", infiniteScroll);
+
 
 
