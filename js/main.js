@@ -11,6 +11,7 @@ function passAplyAdopt() {
         btApplyAdopt[i].addEventListener("click", function() {
             modalApplyAdopt.showModal();
             birthFunctions();
+            attachBlurEventToSelectElements();
         });
     }    
 }
@@ -51,13 +52,13 @@ function populateDays() {
 }
 
 function populateMonth() {
-    const daySelect = document.getElementById("month-bth");
+    const monthSelect = document.getElementById("month-bth");
 
     for (var i = 1; i <= 12; i++) {
         var option = document.createElement("option");
         option.textContent = i;
         option.value = i;
-        daySelect.appendChild(option);
+        monthSelect.appendChild(option);
     }
 }
 
@@ -73,20 +74,24 @@ function populateYears() {
     }
 }
 
-function moneyMask() {
+function attachBlurEventToSelectElements() {
     const daySelect = document.getElementById("day-bth");
     const monthSelect = document.getElementById("month-bth");
     const yearSelect = document.getElementById("year-bth");
+
     daySelect.addEventListener("blur", () => updateSelectStyle(daySelect));
     monthSelect.addEventListener("blur", () => updateSelectStyle(monthSelect));
     yearSelect.addEventListener("blur", () => updateSelectStyle(yearSelect));
+
     function updateSelectStyle(selectElement) {
         if (selectElement.selectedIndex !== 0) {
             selectElement.style.color = "#1E1F27";
             selectElement.style.opacity = "unset";
         }
     }
+}
 
+function moneyMask() {
     const moneyInput = document.getElementById("money");
     moneyInput.addEventListener("click", () => {
         moneyInput.value = "";
