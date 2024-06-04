@@ -503,7 +503,7 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
     display: none;
 }
 
-.wrapper, #carousel-container {
+.wrapper, #carousel-container, #card-carousel {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -848,7 +848,27 @@ header div .donate-container>a {
 
 #bt-right img {
     transform: scaleX(-1);
-}  
+}
+
+#card-carousel {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+#card-carousel .card, #card-carousel .card-donation {
+    height: 100%;
+}
+
+#card-carousel .wrapper {
+    gap: 2px;
+}
+
+#stats-block .wrapper {
+    gap: 2px;
+}
 
 /* Donations block */ 
 
@@ -859,6 +879,7 @@ header div .donate-container>a {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     gap: 80px;
+    align-items: center;
 }
 
 #donation-block section.center-container>h2 {
@@ -1566,6 +1587,12 @@ header div nav.borderNone {
     .screen-default {
         padding-left: 16px;
         padding-right: 16px;
+    }
+    #cards-donation {
+        display: none;
+    }
+    #card-carousel {
+        display: flex;
     }
     header .center-container {
         flex-direction: column;

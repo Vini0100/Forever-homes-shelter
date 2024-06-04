@@ -2,6 +2,8 @@
 
 passAplyAdopt()
 passDonate()
+carouselStats()
+carouselDonation()
 
 // Modal
 
@@ -136,62 +138,123 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Carousel */
 
-const carousel = document.querySelector(".carousel");
-const arrowBtns = document.querySelectorAll(".bt-carousel");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const carouselChildrens = [...carousel.children];
-const dots = document.querySelectorAll(".dots li");
-let cont = 0
+function carouselStats() {
+    const carousel = document.querySelector("#stats-block .carousel");
+    const arrowBtns = document.querySelectorAll("#stats-block .bt-carousel");
+    const firstCardWidth = carousel.querySelector("#stats-block .card").offsetWidth;
+    const carouselChildrens = [...carousel.children];
+    const dots = document.querySelectorAll("#stats-block .dots li");
+    let contStats = 0
 
 
-function dotChange(direction) {
-    dots.forEach(dot => {
-        dot.id = null;
-    });
+    function dotChange(direction) {
+        dots.forEach(dot => {
+            dot.id = null;
+        });
 
-    if (direction === "bt-left") {
-        cont = (cont > 0) ? cont - 1 : dots.length - 1;
-    } else if (direction === "bt-right") {
-        cont = (cont < dots.length - 1) ? cont + 1 : 0;
+        if (direction === "bt-left") {
+            contStats = (contStats > 0) ? contStats - 1 : dots.length - 1;
+        } else if (direction === "bt-right") {
+            contStats = (contStats < dots.length - 1) ? contStats + 1 : 0;
+        }
+
+        dots[contStats].id = "dot-checked";
     }
 
-    dots[cont].id = "dot-checked";
+
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    });
+
+    carouselChildrens.slice(0, cardPerView).forEach(card => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
+
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            carousel.scrollLeft += btn.id == "bt-left" ? -firstCardWidth : firstCardWidth;
+            dotChange(btn.id);
+        });
+    });
+
+    carousel.addEventListener("scroll", () => {
+        if(carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        }
+        else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+        }
+    });    
 }
 
+/* Carousel */
 
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+function carouselDonation() {
+    const carousel = document.querySelector("#donation-block .carousel");
+    const arrowBtns = document.querySelectorAll("#donation-block .bt-carousel");
+    const firstCardWidth = carousel.querySelector("#donation-block .card").offsetWidth;
+    const carouselChildrens = [...carousel.children];
+    const dots = document.querySelectorAll("#donation-block .dots li");
+    let contStats = 0
 
-carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-});
 
-carouselChildrens.slice(0, cardPerView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
+    function dotChange(direction) {
+        dots.forEach(dot => {
+            dot.id = null;
+        });
 
-carousel.classList.add("no-transition");
-carousel.scrollLeft = carousel.offsetWidth;
-carousel.classList.remove("no-transition");
-arrowBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id == "bt-left" ? -firstCardWidth : firstCardWidth;
-        dotChange(btn.id);
+        if (direction === "bt-left") {
+            contStats = (contStats > 0) ? contStats - 1 : dots.length - 1;
+        } else if (direction === "bt-right") {
+            contStats = (contStats < dots.length - 1) ? contStats + 1 : 0;
+        }
+
+        dots[contStats].id = "dot-checked";
+    }
+
+
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
     });
-});
 
-carousel.addEventListener("scroll", () => {
-    if(carousel.scrollLeft === 0) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-        carousel.classList.remove("no-transition");
-    }
-    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-    }
-});
+    carouselChildrens.slice(0, cardPerView).forEach(card => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
 
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            carousel.scrollLeft += btn.id == "bt-left" ? -firstCardWidth : firstCardWidth;
+            dotChange(btn.id);
+        });
+    });
+
+    carousel.addEventListener("scroll", () => {
+        if(carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        }
+        else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+        }
+    });    
+}
 
 
 
