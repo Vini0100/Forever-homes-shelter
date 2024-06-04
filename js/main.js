@@ -9,8 +9,8 @@ function passAplyAdopt() {
 
     for (let i = 0; i < btApplyAdopt.length; i++) {
         btApplyAdopt[i].addEventListener("click", function() {
-            birthFunctions();
             modalApplyAdopt.showModal();
+            birthFunctions();
         });
     }    
 }
@@ -22,6 +22,8 @@ function passDonate() {
     for (let i = 0; i < btDonate.length; i++) {
         btDonate[i].addEventListener("click", function() {
             modalDonate.showModal();
+            moneyMask();
+            handlePaymentSelection();
         });
     }    
 }
@@ -71,55 +73,58 @@ function populateYears() {
     }
 }
 
-const daySelect = document.getElementById("day-bth");
-const monthSelect = document.getElementById("month-bth");
-const yearSelect = document.getElementById("year-bth");
-daySelect.addEventListener("blur", () => updateSelectStyle(daySelect));
-monthSelect.addEventListener("blur", () => updateSelectStyle(monthSelect));
-yearSelect.addEventListener("blur", () => updateSelectStyle(yearSelect));
-function updateSelectStyle(selectElement) {
-    if (selectElement.selectedIndex !== 0) {
-        selectElement.style.color = "#1E1F27";
-        selectElement.style.opacity = "unset";
+function moneyMask() {
+    const daySelect = document.getElementById("day-bth");
+    const monthSelect = document.getElementById("month-bth");
+    const yearSelect = document.getElementById("year-bth");
+    daySelect.addEventListener("blur", () => updateSelectStyle(daySelect));
+    monthSelect.addEventListener("blur", () => updateSelectStyle(monthSelect));
+    yearSelect.addEventListener("blur", () => updateSelectStyle(yearSelect));
+    function updateSelectStyle(selectElement) {
+        if (selectElement.selectedIndex !== 0) {
+            selectElement.style.color = "#1E1F27";
+            selectElement.style.opacity = "unset";
+        }
     }
+
+    const moneyInput = document.getElementById("money");
+    moneyInput.addEventListener("click", () => {
+        moneyInput.value = "";
+    });
+
+    moneyInput.addEventListener("blur", () => {
+        const currencyFormatter = (lang, currency, balance) => {
+            return Intl.NumberFormat(lang, {
+                style: "currency",
+                maximumFractionDigits: 2,
+                currency,
+            }).format(balance);
+        };
+        const value = moneyInput.value.replace(",", ".");
+        const numberValue = parseFloat(value);
+        if (!isNaN(numberValue)) {
+            moneyInput.value = currencyFormatter("pt-BR", "BRL", numberValue);
+        } else {
+            moneyInput.value = "";
+        }
+    });
 }
 
-const moneyInput = document.getElementById("money");
-moneyInput.addEventListener("click", () => {
-    moneyInput.value = "";
-});
-
-moneyInput.addEventListener("blur", () => {
-    const currencyFormatter = (lang, currency, balance) => {
-        return Intl.NumberFormat(lang, {
-            style: "currency",
-            maximumFractionDigits: 2,
-            currency,
-        }).format(balance);
-    };
-    const value = moneyInput.value.replace(",", ".");
-    const numberValue = parseFloat(value);
-    if (!isNaN(numberValue)) {
-        moneyInput.value = currencyFormatter("pt-BR", "BRL", numberValue);
-    } else {
-        moneyInput.value = "";
-    }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
+function handlePaymentSelection() {
     const radios = document.querySelectorAll(".custom-check");
-    for (let i = 0; i < radios.length; i++) {
-        radios[i].addEventListener("change", () => {
-            const paymentItems = document.querySelectorAll(".payment-item");
-            for (let j = 0; j < paymentItems.length; j++) {
-                paymentItems[j].classList.remove("checked");
-            }
-            if (radios[i].checked) {
-                radios[i].closest(".payment-item").classList.add("checked");
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            const paymentItem = radio.closest(".payment-item");
+            if (paymentItem) {
+                const paymentItems = document.querySelectorAll(".payment-item");
+                paymentItems.forEach(item => item.classList.remove("checked"));
+                if (radio.checked) {
+                    paymentItem.classList.add("checked");
+                }
             }
         });
-    }
-});
+    });
+}
 
 function carouselStats() {
     const carousel = document.querySelector("#stats-block .carousel");
