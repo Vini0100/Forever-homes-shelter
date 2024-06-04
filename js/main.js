@@ -1,11 +1,7 @@
-// Start
-
-passAplyAdopt()
-passDonate()
-carouselStats()
-carouselDonation()
-
-// Modal
+passAplyAdopt();
+passDonate();
+carouselStats();
+carouselDonation();
 
 function passAplyAdopt() {
     const modalApplyAdopt = document.getElementById("apply-adopt-modal");
@@ -34,8 +30,6 @@ function closeModal(modal) {
     const modalClose = document.getElementById(modal);
     modalClose.close();
 }
-
-// Birth
 
 function birthFunctions() {
     populateDays();
@@ -83,7 +77,6 @@ const yearSelect = document.getElementById("year-bth");
 daySelect.addEventListener("blur", () => updateSelectStyle(daySelect));
 monthSelect.addEventListener("blur", () => updateSelectStyle(monthSelect));
 yearSelect.addEventListener("blur", () => updateSelectStyle(yearSelect));
-
 function updateSelectStyle(selectElement) {
     if (selectElement.selectedIndex !== 0) {
         selectElement.style.color = "#1E1F27";
@@ -91,10 +84,7 @@ function updateSelectStyle(selectElement) {
     }
 }
 
-// Money
-
 const moneyInput = document.getElementById("money");
-
 moneyInput.addEventListener("click", () => {
     moneyInput.value = "";
 });
@@ -116,12 +106,8 @@ moneyInput.addEventListener("blur", () => {
     }
 });
 
-
-// Event Payment button
-
 document.addEventListener("DOMContentLoaded", () => {
     const radios = document.querySelectorAll(".custom-check");
-
     for (let i = 0; i < radios.length; i++) {
         radios[i].addEventListener("change", () => {
             const paymentItems = document.querySelectorAll(".payment-item");
@@ -135,9 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-/* Carousel */
-
 function carouselStats() {
     const carousel = document.querySelector("#stats-block .carousel");
     const arrowBtns = document.querySelectorAll("#stats-block .bt-carousel");
@@ -145,7 +128,6 @@ function carouselStats() {
     const carouselChildrens = [...carousel.children];
     const dots = document.querySelectorAll("#stats-block .dots li");
     let contStats = 0
-
 
     function dotChange(direction) {
         dots.forEach(dot => {
@@ -161,13 +143,10 @@ function carouselStats() {
         dots[contStats].id = "dot-checked";
     }
 
-
     let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
     carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
         carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
     });
-
     carouselChildrens.slice(0, cardPerView).forEach(card => {
         carousel.insertAdjacentHTML("beforeend", card.outerHTML);
     });
@@ -196,8 +175,6 @@ function carouselStats() {
     });    
 }
 
-/* Carousel */
-
 function carouselDonation() {
     const carousel = document.querySelector("#donation-block .carousel");
     const arrowBtns = document.querySelectorAll("#donation-block .bt-carousel");
@@ -205,7 +182,6 @@ function carouselDonation() {
     const carouselChildrens = [...carousel.children];
     const dots = document.querySelectorAll("#donation-block .dots li");
     let contStats = 0
-
 
     function dotChange(direction) {
         dots.forEach(dot => {
@@ -221,13 +197,10 @@ function carouselDonation() {
         dots[contStats].id = "dot-checked";
     }
 
-
     let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
     carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
         carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
     });
-
     carouselChildrens.slice(0, cardPerView).forEach(card => {
         carousel.insertAdjacentHTML("beforeend", card.outerHTML);
     });
