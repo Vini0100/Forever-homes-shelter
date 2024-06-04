@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoptables</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,7 @@
             <nav class="center-container borderNone">
                 <div id="principal-menu">
                     <div id="container-logotype-header">
-                        <img src="/img/Logotype.png" alt="Logotype">
+                        <img src="../img/Logotype.png" alt="Logotype">
                     </div>
                     <div id="items-menu">
                         <a href="#">Rescue center</a>
@@ -25,33 +25,30 @@
 
                 <div id="second-menu">
                     <div id="phone-container">
-                        <p><img src="/img/Shape_phone.svg" alt="Phone"><span>631-249-7325</span></p>
+                        <p><img src="../img/Shape_phone.svg" alt="Phone"><span>631-249-7325</span></p>
                     </div>
                     <div class="donate-container">
-                        <a class="donate-button" href="#"><img src="/img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
+                        <a class="donate-button" href="#"><img src="../img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-
     <dialog id="apply-adopt-modal">
         <section id="apply-adopt-modal-container">
-               <div>
+            <div>
                 <h1>Apply to Adopt</h1>
-                <p>Small text description can goes here</p>
+                <p>Provide a forever or temporary <br> home to a homeless animal.</p>
             </div>
-            <form action="/pages/adoptables.html">
+            <form action="../pages/adoptables.html">
                 <div class="input-modal-text">
                     <label for="email">EMAIL<span>*</span></label>
                     <input placeholder="youremail@here|" type="email" id="email" name="email" required>
                 </div>
-            
                 <div class="input-modal-text">
                     <label for="name">FULL NAME<span>*</span></label>
                     <input placeholder="Your name" type="text" id="name" name="name" required>
                 </div>
-            
                 <div class="input-modal-birth">
                     <label for="day">DATE OF BIRTH<span>*</span></label>
                     <div>
@@ -80,28 +77,25 @@
                         </div>
 	                    <label for="terms">I agree with <a>Privacy Policy</a> and <a>Terms of Conditions</a></label><br>
                     </div>
-                    <button class="button-adopt" type="submit"><img src="/img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
-                    <button class="button-adopt" type="button" onclick="closeModal('apply-adopt-modal')"><img src="/img/Arrow_left.svg" alt="Back">Cancel</button>
+                    <button class="button-adopt" type="submit"><img src="../img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
+                    <button class="button-adopt" type="button" onclick="closeModal('apply-adopt-modal')"><img src="../img/Arrow_left.svg" alt="Back">Cancel</button>
                 </div>
             </form>                
         </section>
     </dialog>
-
     <dialog id="donate-modal">
         <section id="donate-container-modal">
             <h1>Choose your <br> Donate </h1>
-            <form action="pages/success.html">
+            <form action="../pages/success.html">
                 <div class="input-modal-text">
                     <label for="email">EMAIL<span>*</span></label>
                     <input placeholder="youremail@here|" type="email" id="email" name="email" required>
                 </div>
-            
                 <div class="input-modal-text">
                     <label for="money">HOW MUCH CAN YOU HELP?<span>*</span></label>
                         <label for="money"></label>
                         <input placeholder="R$ 95,00" type="text" id="money" name="money" required>
                 </div>
-
                 <div id="payment-donate">
                     <label for="name">PAYMENT METHOD<span>*</span></label>
                     <div class="type-payment">
@@ -112,7 +106,6 @@
                                 <label for="pix" class="custom-radio"></label>
                             </div>
                         </div>
-                
                         <div class="payment-item">
                             <label for="credit" class="payment-label">Credit <br> Card</label>
                             <div>
@@ -120,7 +113,6 @@
                                 <label for="credit" class="custom-radio"></label>
                             </div>
                         </div>
-                
                         <div class="payment-item">
                             <label for="paypal" class="payment-label hidden-word">Paypal</label>
                             <label for="paypal" class="payment-label break-word">Pay<br>pal</label>
@@ -131,97 +123,95 @@
                         </div>
                     </div>
                 </div>
-                <button class="bt-default-donate-modal"><img src="/img/Shape_donate.svg" alt="Heart">I wanna  Help!</button>
-                <button onclick="closeModal('donate-modal')" class="bt-default-donate-modal"><img src="/img/Arrow_left.svg" alt="Back">Cancel</button>
+                <button class="bt-default-donate-modal"><img src="../img/Shape_donate.svg" alt="Heart">I wanna  Help!</button>
+                <button onclick="closeModal('donate-modal')" type="button" class="bt-default-donate-modal"><img src="../img/Arrow_left.svg" alt="Back">Cancel</button>
             </form>
         </section>
     </dialog>
-
     <main>
         <div id="adopt-screen">
             <div class="screen-default">
                 <section class="center-container padding-default">
-                    <a class="bt-back" href="/index.html"><img src="/img/Arrow_left.svg" alt="Back">Back</a>
+                    <a class="bt-back" href="../index.html"><img src="../img/Arrow_left.svg" alt="Back">Back</a>
                     <h2>Our Adoptable Pets</h2>
                     <div id="adopt-container">
                         <div class="adopt-item">
                             <div class="block-bk">
-                                <img src="/img/Cat_1.svg" alt="Cat">
+                                <img src="../img/Cat_1.svg" alt="Cat">
                             </div>
                             <p>BOB</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
 
                         <div class="adopt-item">
                             <div class="radius-bk">
-                                <img src="/img/Cat_2.svg" alt="Cat">
+                                <img src="../img/Cat_2.svg" alt="Cat">
                             </div>
                             <p>CLORINDE</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
 
                         <div class="adopt-item">
                             <div class="block-bk">
-                                <img src="/img/Dog_1.svg" alt="Dog">
+                                <img src="../img/Dog_1.svg" alt="Dog">
                             </div>
                             <p>RONEY</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
 
                         <div class="adopt-item">
                             <div class="radius-bk-two">
-                                <img src="/img/Dog_2.svg" alt="Dog">
+                                <img src="../img/Dog_2.svg" alt="Dog">
                             </div>
                             <p>FLOCKS</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
 
                         <div class="adopt-item">
                             <div class="block-bk">
-                                <img src="/img/Cat_3.svg" alt="Cat">
+                                <img src="../img/Cat_3.svg" alt="Cat">
                             </div>
                             <p>MARY</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
 
                         <div class="adopt-item">
                             <div class="radius-bk">
-                                <img src="/img/Dog_3.svg" alt="Dog">
+                                <img src="../img/Dog_3.svg" alt="Dog">
                             </div>
                             <p>ROBS</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
 
                         <div class="adopt-item">
                             <div class="block-bk">
-                                <img src="/img/Cat_4.svg" alt="Cat">
+                                <img src="../img/Cat_4.svg" alt="Cat">
                             </div>
                             <p>MATT</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
                         
                         <div class="adopt-item">
                             <div class="radius-bk-two">
-                                <img src="/img/Dog_4.svg" alt="Dog">
+                                <img src="../img/Dog_4.svg" alt="Dog">
                             </div>
                             <p>ARISTOTLE</p>
-                            <a href=""><img src="/img/Shape_dog_white.svg" alt="Dog">See more</a>
+                            <a href=""><img src="../img/Shape_dog_white.svg" alt="Dog">See more</a>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
-
     <footer>
         <div class="screen-default padding-default">
             <nav class="center-container">
                 <div id="footer-links-block">
                     <div id="footer-logo">
                         <div>
-                            <img src="/img/Logo_footer.png" alt="Logotype">
+                            <img src="../img/Logo_footer.png" alt="Logotype">
                         </div>
-                        <p>FOREVER <br>HOMES <span><img src="/img/Shape_heart.svg" alt="Heart"></span></p>
+                        <p>FOREVER <br>HOMES <span><img src="../img/Shape_heart.svg" alt="Heart"></span></p>
                         <p>Helps Save Lives</p>
                     </div>
                     <div id="footer-links">
@@ -246,30 +236,30 @@
                             <div id="items-contact">
                                 <div class="item-contact">
                                    <div>
-                                        <img src="/img/Shape_address.svg" alt="Address">
+                                        <img src="../img/Shape_address.svg" alt="Address">
                                     </div>
                                     <p>PO Box 83644, Middleton, 2452 Wilson</p>
                                 </div>
 
                                 <div class="item-contact">
                                     <div>
-                                        <img src="/img/Shape_phone.svg" alt="Phone">
+                                        <img src="../img/Shape_phone.svg" alt="Phone">
                                     </div>
                                     <p>631-249-7325</p>
                                 </div>
                                         
                                 <div class="item-contact">
                                     <div>
-                                        <img src="/img/Shape_mail.svg" alt="Mail">
+                                        <img src="../img/Shape_mail.svg" alt="Mail">
                                     </div>
                                     <p>pet_home@gmail.com</p>
                                 </div>
                             </div>
 
                             <div>
-                                <a href="#"><img src="/img/Shape_twitter.svg" alt="Twitter"></a>
-                                <a href="#"><img src="/img/Shape_whatsApp.svg" alt="WhatsApp"></a>
-                                <a href="#"><img src="/img/Shape_instagram.svg" alt="Instagram"></a>
+                                <a href="#"><img src="../img/Shape_twitter.svg" alt="Twitter"></a>
+                                <a href="#"><img src="../img/Shape_whatsApp.svg" alt="WhatsApp"></a>
+                                <a href="#"><img src="../img/Shape_instagram.svg" alt="Instagram"></a>
                             </div>
                         </div>
                     </div>
@@ -278,6 +268,6 @@
             </nav>
         </div>
     </footer>
-    <script src="/js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

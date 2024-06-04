@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,7 @@
             <nav class="center-container">
                 <div id="principal-menu">
                     <div id="container-logotype-header">
-                        <img src="/img/Logotype.png" alt="Logotype">
+                        <img src="../img/Logotype.png" alt="Logotype">
                     </div>
                     <div id="items-menu">
                         <a href="#">Rescue center</a>
@@ -25,33 +25,30 @@
 
                 <div id="second-menu">
                     <div id="phone-container">
-                        <p><img src="/img/Shape_phone.svg" alt="Phone"><span>631-249-7325</span></p>
+                        <p><img src="../img/Shape_phone.svg" alt="Phone"><span>631-249-7325</span></p>
                     </div>
                     <div class="donate-container">
-                        <a class="donate-button" href="#"><img src="/img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
+                        <a class="donate-button" href="#"><img src="../img/Shape_donate.svg" alt="Heart"><nav>Donate</nav></a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-
     <dialog id="apply-adopt-modal">
         <section id="apply-adopt-modal-container">
-               <div>
+            <div>
                 <h1>Apply to Adopt</h1>
-                <p>Small text description can goes here</p>
+                <p>Provide a forever or temporary <br> home to a homeless animal.</p>
             </div>
-            <form action="/pages/adoptables.html">
+            <form action="../pages/adoptables.html">
                 <div class="input-modal-text">
                     <label for="email">EMAIL<span>*</span></label>
                     <input placeholder="youremail@here|" type="email" id="email" name="email" required>
                 </div>
-            
                 <div class="input-modal-text">
                     <label for="name">FULL NAME<span>*</span></label>
                     <input placeholder="Your name" type="text" id="name" name="name" required>
                 </div>
-            
                 <div class="input-modal-birth">
                     <label for="day">DATE OF BIRTH<span>*</span></label>
                     <div>
@@ -80,28 +77,25 @@
                         </div>
 	                    <label for="terms">I agree with <a>Privacy Policy</a> and <a>Terms of Conditions</a></label><br>
                     </div>
-                    <button class="button-adopt" type="submit"><img src="/img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
-                    <button class="button-adopt" type="button" onclick="closeModal('apply-adopt-modal')"><img src="/img/Arrow_left.svg" alt="Back">Cancel</button>
+                    <button class="button-adopt" type="submit"><img src="../img/Shape_dog_white.svg" alt="Dog"> I wanna Adopt!</button>
+                    <button class="button-adopt" type="button" onclick="closeModal('apply-adopt-modal')"><img src="../img/Arrow_left.svg" alt="Back">Cancel</button>
                 </div>
             </form>                
         </section>
     </dialog>
-
     <dialog id="donate-modal">
         <section id="donate-container-modal">
             <h1>Choose your <br> Donate </h1>
-            <form action="pages/success.html">
+            <form action="../pages/success.html">
                 <div class="input-modal-text">
                     <label for="email">EMAIL<span>*</span></label>
                     <input placeholder="youremail@here|" type="email" id="email" name="email" required>
                 </div>
-            
                 <div class="input-modal-text">
                     <label for="money">HOW MUCH CAN YOU HELP?<span>*</span></label>
                         <label for="money"></label>
                         <input placeholder="R$ 95,00" type="text" id="money" name="money" required>
                 </div>
-
                 <div id="payment-donate">
                     <label for="name">PAYMENT METHOD<span>*</span></label>
                     <div class="type-payment">
@@ -112,7 +106,6 @@
                                 <label for="pix" class="custom-radio"></label>
                             </div>
                         </div>
-                
                         <div class="payment-item">
                             <label for="credit" class="payment-label">Credit <br> Card</label>
                             <div>
@@ -120,7 +113,6 @@
                                 <label for="credit" class="custom-radio"></label>
                             </div>
                         </div>
-                
                         <div class="payment-item">
                             <label for="paypal" class="payment-label hidden-word">Paypal</label>
                             <label for="paypal" class="payment-label break-word">Pay<br>pal</label>
@@ -131,28 +123,27 @@
                         </div>
                     </div>
                 </div>
-                <button class="bt-default-donate-modal"><img src="/img/Shape_donate.svg" alt="Heart">I wanna  Help!</button>
-                <button onclick="closeModal('donate-modal')" class="bt-default-donate-modal"><img src="/img/Arrow_left.svg" alt="Back">Cancel</button>
+                <button class="bt-default-donate-modal"><img src="../img/Shape_donate.svg" alt="Heart">I wanna  Help!</button>
+                <button onclick="closeModal('donate-modal')" type="button" class="bt-default-donate-modal"><img src="../img/Arrow_left.svg" alt="Back">Cancel</button>
             </form>
         </section>
     </dialog>
-
     <main>
         <section id="success-screen">
             <div>
-                <a class="bt-back" href="/index.html"><img src="/img/Arrow_left.svg" alt="Back">Back</a>
+                <a class="bt-back" href="../index.html"><img src="../img/Arrow_left.svg" alt="Back">Back</a>
                 <div class="success-layout">
                     <div>
                         <h1>Success!</h1>
                         <p>Thanks for helping to contribute!</p>
                     </div>
                     <div>
-                        <img src="/img/Checked.svg" alt="Checked">
+                        <img src="../img/Checked.svg" alt="Checked">
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <script src="/js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
