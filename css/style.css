@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
-/* Elements */
-
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +18,6 @@ button {
     cursor: pointer;
 }
 
-/* background-color */
-
 header, #success-screen, #main-screen, #adopt-info-block, footer {
     background-color: #F5F5F5;
 }
@@ -33,8 +29,6 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
 #subscription-block {
     background-color: #5758F1;
 }
-
-/* class */
 
 .center-container {
     max-width: 1208px;
@@ -264,7 +258,8 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
 .input-modal-birth div>div>select {
     outline: none;
     border: none;
-    color: #1E1F27;
+    color: #37383F;
+    opacity: 70%;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -502,7 +497,7 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
     display: none;
 }
 
-.wrapper, #carousel-container {
+.wrapper, #carousel-container, #card-carousel {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -630,8 +625,6 @@ header, #success-screen, #main-screen, #adopt-info-block, footer {
     display: none;
 }
 
-/* Header */
-
 header .center-container {
     padding: 28px 0;
     display: flex;
@@ -683,8 +676,6 @@ header div .donate-container>a {
     align-items: center;
     color: #1E1F27;
 }
-
-/* Main Screen */
 
 #main-screen .center-container {
     display: flex;
@@ -773,8 +764,6 @@ header div .donate-container>a {
     width: 25.81px;
 }
 
-/* Stats Block */
-
 #stats-block .center-container {
     display: flex;
     flex-flow: column nowrap;
@@ -847,9 +836,27 @@ header div .donate-container>a {
 
 #bt-right img {
     transform: scaleX(-1);
-}  
+}
 
-/* Donations block */ 
+#card-carousel {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+#card-carousel .card, #card-carousel .card-donation {
+    height: 100%;
+}
+
+#card-carousel .wrapper {
+    gap: 2px;
+}
+
+#stats-block .wrapper {
+    gap: 2px;
+}
 
 #donation-block section.center-container {
     display: flex;
@@ -858,6 +865,7 @@ header div .donate-container>a {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     gap: 80px;
+    align-items: center;
 }
 
 #donation-block section.center-container>h2 {
@@ -875,8 +883,6 @@ header div .donate-container>a {
     row-gap: 60px;
     justify-content: center;
 }
-
-/* Adopt info block */
 
 #adopt-info-block section {
     display: flex;
@@ -950,8 +956,6 @@ header div .donate-container>a {
     margin: 0 auto;
 }
 
-/* Difference-block */
-
 #difference-block section {
     display: flex;
     flex-direction: column;
@@ -992,8 +996,6 @@ header div .donate-container>a {
 #difference-title div:last-child>img {
     transform: scaleX(-1);
 }
-
-/* Adopt block */
 
 #adopt-block .padding-default-two {
     padding-bottom: 0px;
@@ -1082,8 +1084,6 @@ header div .donate-container>a {
     color: #fff;
 }
 
-/* Subscription block */
-
 #subscription-block section {
     display: flex;
     flex-direction: column;
@@ -1152,8 +1152,6 @@ header div .donate-container>a {
     line-height: 32px;
     color: #1E1F27;
 }
-
-/* Footer */
 
 footer nav.center-container {
     display: flex;
@@ -1263,8 +1261,6 @@ footer nav>p>span {
     color: #FF3D9A;
 }
 
-/* Modal Apply to adopt */ 
-
 #apply-adopt-modal {
     margin: auto auto;
     border: none;
@@ -1342,8 +1338,6 @@ footer nav>p>span {
     background-position: center;
 }
 
-/* Modal Donate */
-
 #donate-modal {
     margin: auto auto;
     border: none;
@@ -1403,8 +1397,6 @@ footer nav>p>span {
 #donate-modal #donate-container-modal>form>button:last-of-type {
     background-color: #37383F;
 }
-
-/* Success screen */
 
 #success-screen {
     height: 100vh;
@@ -1475,8 +1467,6 @@ footer nav>p>span {
     color: #37383F;
 }
 
-/* Adoptables */
-
 #adopt-screen section {
     display: flex;
     height: fit-content;
@@ -1505,8 +1495,6 @@ header div nav.borderNone {
     gap: 60px;
     justify-content: center;
 }
-
-/* Media queries */
 
 @media screen and (max-width: 1425px) {
     .wrapper .carousel {
@@ -1565,6 +1553,12 @@ header div nav.borderNone {
     .screen-default {
         padding-left: 16px;
         padding-right: 16px;
+    }
+    #cards-donation {
+        display: none;
+    }
+    #card-carousel {
+        display: flex;
     }
     header .center-container {
         flex-direction: column;
