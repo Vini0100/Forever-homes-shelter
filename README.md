@@ -42,7 +42,7 @@ Forever Homes Shelter is a website project with the objective of providing a for
 Open the terminal of your operation system and put de comand bellow ⬇
 
 ```bash
-   git clone https://github.com/Vini0100/Challenge-Week-4-Compass.git
+   git clone https://github.com/Vini0100/Forever-homes-shelter.git
 ```
 
 ## 🛠️ Open and run the project
